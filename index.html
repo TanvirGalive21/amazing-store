@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amazing Store</title>
   <link rel="stylesheet" href="./css/style.css" />
+   <!-- font awesome -->
+   <script src="https://kit.fontawesome.com/31793e0b66.js" crossorigin="anonymous"></script>
   <!-- bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
@@ -17,14 +19,17 @@
 </head>
 
 <body>
+  <!-- Header area -->
   <header class="text-center mt-5">
-    <h1>Welcome to <span class="text-success">Amazing Store</span></h1>
+    <h1>Welcome to <span class="color">Amazing Store</span></h1>
   </header>
+
+  <!-- start main area -->
   <main class="main">
     <div class="search-field m-5">
       <div class="search-box d-flex m-auto w-75">
-        <input id="input-field" class="search-field form-control  me-2" type="text" />
-        <button type="button" class="btn btn-secondary search-button" data-toggle="button" aria-pressed="false"
+        <input id="input-field" class="search-field form-control  me-2" placeholder="Search in Amazin Store" type="text" />
+        <button type="button" class="btn btn-warning search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
@@ -36,6 +41,8 @@
           <!-- <h1></h1> -->
         </div>
       </div>
+
+      <!-- cart area  -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -81,12 +88,15 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-success text-center">Buy Now</button>
+            <a class="buy-now-btn btn-danger text-center">Buy Now</a>
           </div>
         </div>
       </div>
     </div>
   </main>
+  <!-- End main area -->
+
+  <!-- footer area -->
   <footer></footer>
 
   <!-- add javascript  file  -->

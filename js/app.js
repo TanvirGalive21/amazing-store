@@ -20,9 +20,9 @@ const showProducts = (products) => {
       <p>Category: ${product.category}</p>
   
       <h2>Price: $ ${product.price}</h2>
-      <p class="">Total Rating: ${product.rating.count}</p>
-      <p class="">Rating Rate: ${product.rating.rate}</p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary mx-2">add to cart</button>
+      <p class="color">Total Rating: ${product.rating.count}</p>
+      <p class="color"><i class="fas fa-star filled"></i> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star empty"></i> ${product.rating.rate} rating rate:</p>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-warning mx-2">add to cart</button>
       <button id="details-btn" class="btn btn-info">Details</button></div>
       
       <p></p>
@@ -30,6 +30,7 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -45,6 +46,7 @@ const getInputValue = (id) => {
   return converted;
 };
 
+
 // main price update function
 const updatePrice = (id, value) => {
   // setInnerText();
@@ -56,11 +58,13 @@ const updatePrice = (id, value) => {
   updateTaxAndCharge();
 };
 
+
 // set innerText function
 const setInnerText = (id, value) => {
   document.getElementById(id).innerText = (value);
  
 };
+
 
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
@@ -85,11 +89,13 @@ const updateTaxAndCharge = () => {
   
 };
 
+
 //grandTotal update function
 const updateTotal = () => {
   const grandTotal = (getInputValue("price") + getInputValue("delivery-charge") + getInputValue("total-tax")).toFixed(2);
   document.getElementById("total").innerText = grandTotal;
   
 };
+
 
 loadProducts();
