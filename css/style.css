@@ -47,7 +47,7 @@ body {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
   border: 1px solid coral;
-  background:lightyellow;
+  background:#f5f5f5
 }
 .product-image {
   width: 150px;
