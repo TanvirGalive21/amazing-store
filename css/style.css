@@ -66,18 +66,16 @@ body {
   padding-right: 30px;
 }
 
-a.buy-now-btn {
-  text-decoration: none;
-  display: inline-block;
+.buy-now-btn {
   border: 1px solid coral;
   padding: 10px 30px;
-  border-radius: 50px;
+  border-radius: 40px;
   background-color:coral;
-  color: #333;
+  color: #000;
   -webkit-transition: .3s;
   transition: .3s;
 }
-a.buy-now-btn:hover{
+.buy-now-btn:hover{
   background-color:lightyellow;
   color: #000;
 }
